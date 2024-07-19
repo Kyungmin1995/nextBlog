@@ -27,7 +27,7 @@ export default function About() {
         <div className="container">
           <div className="pd20">
             <div className="AboutMe">
-              <h2 className="pdb40">소개글</h2>
+              <h2 className="pdb40">소개</h2>
               <p className="aboutFont"></p>
               <br />
               <p className="pdb40"></p>

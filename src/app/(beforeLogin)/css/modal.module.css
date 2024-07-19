@@ -1,0 +1,105 @@
+.back {
+  background: #000000a3;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  z-index: 2;
+}
+.modal_body {
+  width: calc(100% - 40px);
+  margin: 36px auto;
+  background: #282e33;
+  border-radius: 8px;
+  max-width: 1200px;
+}
+
+.top {
+  margin: 0 16px 8px 32px;
+  min-height: 32px;
+  padding: 12px 0px 8px 0px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.labels,
+.mid,
+.bottom {
+  padding: 8px 0;
+  margin: 0 16px 8px 16px;
+}
+.title {
+  color: #b6c2cf;
+  padding: 0px 8px;
+  width: calc(100% - 36px);
+}
+
+.bottom button,
+.mid button {
+  margin-top: 20px;
+  width: 100px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: #bcd6f00a;
+  cursor: pointer;
+}
+.delete {
+  margin-bottom: 10px;
+}
+.top > span {
+  width: 32px;
+  height: 32px;
+  background: #ddd;
+}
+.top > div {
+  width: calc(100% - 100px);
+}
+.top div > input {
+  width: 100%;
+  background: #0000;
+  border-radius: 3px;
+  box-shadow: none;
+  font-size: 20px;
+  font-weight: 600;
+  height: 32px;
+  line-height: 24px;
+  margin: -4px -8px;
+  min-height: 24px;
+  padding: 4px 8px;
+  resize: none;
+  outline: none;
+  border: none;
+  color: #b6c2cf;
+}
+
+.top > button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: #282e33;
+}
+.labels > div.flex {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+}
+.mid input,
+.bottom input {
+  background: #a1bdd914;
+  border: none;
+  border-radius: 3px;
+  box-shadow: none;
+  color: #b6c2cf;
+  display: block;
+  height: 60px;
+  padding: 8px 12px;
+  margin-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}

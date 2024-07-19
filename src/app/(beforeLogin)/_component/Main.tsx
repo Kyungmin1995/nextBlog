@@ -3,5 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Main() {
-  return <div>ㅇㅇ</div>;
+  return (
+    <div>
+      <Link href={"/todo"}>todo</Link>
+
+      <div>메인페이지</div>
+    </div>
+  );
 }

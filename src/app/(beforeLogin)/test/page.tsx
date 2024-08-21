@@ -4,45 +4,6 @@ import { useState, useRef, DragEvent } from "react";
 import { useSprings, animated } from "react-spring";
 import "@/app/(beforeLogin)/test/test.css";
 
-interface DraggableItemProps {
-  id: string;
-  index: number;
-  children: React.ReactNode;
-  onDragStart: (e: DragEvent<HTMLDivElement>, index: number) => void;
-  onDragOver: (e: DragEvent<HTMLDivElement>, index: number) => void;
-  onDrop: (e: DragEvent<HTMLDivElement>, index: number) => void;
-  style: any;
-}
-
-const DraggableItem = ({
-  id,
-  index,
-  children,
-  onDragStart,
-  onDragOver,
-  onDrop,
-  style,
-}: DraggableItemProps) => {
-  return (
-    <animated.div
-      draggable
-      onDragStart={(e) => onDragStart(e, index)}
-      onDragOver={(e) => onDragOver(e, index)}
-      onDrop={(e) => onDrop(e, index)}
-      style={{
-        ...style,
-        padding: "8px",
-        margin: "4px",
-        backgroundColor: "lightgray",
-        cursor: "move",
-        width: "100%",
-      }}
-    >
-      {children}
-    </animated.div>
-  );
-};
-
 interface Item {
   id: string;
   content: string;
@@ -111,21 +72,6 @@ export default function Page() {
         height: "100vh",
         overflowY: "auto",
       }}
-    >
-      <h3>Sortable Items</h3>
-      {springs.map((style, index) => (
-        <DraggableItem
-          key={items[index].id}
-          id={items[index].id}
-          index={index}
-          onDragStart={handleDragStart}
-          onDragOver={handleDragOver}
-          onDrop={handleDrop}
-          style={{ ...style, position: "absolute", top: 0 }}
-        >
-          {items[index].content}
-        </DraggableItem>
-      ))}
-    </div>
+    ></div>
   );
 }

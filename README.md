@@ -1,3 +1,1 @@
-# nextBlogrrr
-
-# blog...
+# nextBlog

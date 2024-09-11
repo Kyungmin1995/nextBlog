@@ -16,10 +16,10 @@ export default function UrlData() {
   const store = useAppSelector((state) => state.menuReducer);
   const dispatch = useAppDispatch();
 
-  useEffect(() => {
-    if (!btn) dispatch(setMenu(false));
-    console.log(store, btn, "store");
-  }, [btn]);
+  // useEffect(() => {
+  //   if (!btn) dispatch(setMenu(false));
+  //   console.log(store, btn, "store");
+  // }, [btn, dispatch, store]);
 
   useEffect(() => {
     const timeout = setTimeout(() => setLoading(true), 1200);
@@ -34,9 +34,6 @@ export default function UrlData() {
     { url: "/", text: "Home" },
     { url: "/todo", text: "Todo" },
     { url: "/about", text: "About" },
-    { url: "/test", text: "test" },
-    // { url: "/portfolio", text: "Portfolio" },
-    // { url: "/skill", text: "Skill" },
   ];
 
   function toggleMenu() {

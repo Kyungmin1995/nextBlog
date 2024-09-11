@@ -1,9 +1,8 @@
 import { ReactNode } from "react";
-import styles from "@/app/page.module.css";
 import Wrapper from "@/app/(beforeLogin)/_component/Wrapper";
 import Nav from "@/app/(beforeLogin)/_component/Nav";
-
 import { Providers } from "@/redux/provider";
+
 export type LayOutProps = {
   children: ReactNode;
   modal: ReactNode;
@@ -15,9 +14,8 @@ export default function layout({ children, modal, auth }: LayOutProps) {
     <Providers>
       <Wrapper>
         <Nav />
-        {/* {auth} */}
         {modal}
-        {children}
+        <div className="container">{children}</div>
       </Wrapper>
     </Providers>
   );

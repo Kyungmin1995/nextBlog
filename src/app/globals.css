@@ -17,7 +17,7 @@
   --pdb20: 20px;
   --pdb40: 40px;
   --pdt20: 20px;
-  --pdt40: 20px;
+  --pdt40: 40px;
 }
 
 @media (min-width: 480px) {
@@ -93,7 +93,9 @@ body {
 
 /* 컨테이너 */
 .container {
-  /* padding: 20px 40px; */
+  padding: var(--pd20) var(--pdt20);
+  /* padding: var(--pd20); */
+  /* padding-top: var(--pdt40); */
   margin: 0 auto;
   /* max-width: 1980px; */
 }
@@ -141,16 +143,32 @@ body {
   width: 85%;
   height: 1px;
   background: #fff;
-  transform: translate(0px, -12px);
+  animation: menuTop 0.2s both;
 }
+
+@keyframes menuTop {
+  100% {
+    width: 100%;
+    transform: translate(0px, -12px);
+    background: #7b7575;
+  }
+}
+@keyframes menuBottom {
+  100% {
+    width: 100%;
+    transform: translate(0px, 12px);
+    background: #7b7575;
+  }
+}
+
 .menubtn::after {
   content: "";
   position: absolute;
   width: 90%;
   height: 1px;
   background: #fff;
-  transform: translate(0px, 12px);
-  transition: 0.5s all;
+
+  animation: menuBottom 0.2s both;
 }
 .menubtn.active::before {
   animation: menuActiveTop 0.5s both;

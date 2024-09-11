@@ -1,7 +1,7 @@
 import React from "react";
 
 const Wrapper = ({ children }: { children: React.ReactNode }) => {
-  return <body style={{ position: "relative" }}>{children}</body>;
+  return <body suppressHydrationWarning={true}>{children}</body>;
 };
 
 export default Wrapper;

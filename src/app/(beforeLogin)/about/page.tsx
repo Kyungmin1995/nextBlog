@@ -24,21 +24,17 @@ export default function About() {
   return (
     <>
       {!store && (
-        <div className="container">
-          <div className="pd20">
-            <div className="AboutMe">
-              <h2 className="pdb40">소개</h2>
-              <p className="aboutFont"></p>
-              <br />
-              <p className="pdb40"></p>
-              <PropsDiv
-                loading={loading}
-                setLoading={setLoading}
-                time={time}
-                setTime={setTime2}
-              />
-            </div>
-          </div>
+        <div className="AboutMe">
+          <h2 className="pdb40">소개</h2>
+          <p className="aboutFont"></p>
+          <br />
+          <p className="pdb40"></p>
+          <PropsDiv
+            loading={loading}
+            setLoading={setLoading}
+            time={time}
+            setTime={setTime2}
+          />
         </div>
       )}
     </>

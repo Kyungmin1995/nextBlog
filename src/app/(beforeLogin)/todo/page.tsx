@@ -15,13 +15,12 @@ export default function Todo() {
     router.back();
   };
   return (
-    <div className="container">
+    <div>
       <Link href={"/todo/1"}>모달온</Link>
-
       <div className={styles.flex}>
         <div className={styles.list}>
           <div className={styles.list_top}>
-            <p className={styles.title}>title</p>
+            <p className={styles.title}>할일</p>
             <div className={styles.position}>
               <span>
                 <CiMenuKebab />
@@ -29,7 +28,10 @@ export default function Todo() {
             </div>
           </div>
           <div className={styles.list_body}>
-            <p>ㅇㅇㅇㅇㅇ</p>
+            <p>몽고디비 재연결 필요</p>
+          </div>
+          <div className={styles.list_body}>
+            <p>dnd 설정</p>
           </div>
           <div className={styles.list_footer}>
             {!addBtn ? (
